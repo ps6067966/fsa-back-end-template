@@ -1,5 +1,5 @@
-import { helloRoute } from './helloRoute';
+import { getUserInfoRoute } from './getUserInfoRoute';
 
 export const routes = [
-	helloRoute,
+	getUserInfoRoute,
 ];
