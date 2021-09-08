@@ -1,6 +1,7 @@
 import express from 'express';
 import { routes } from './routes';
 import { db } from './db';
+import { ALPHA_API_KEY } from './keys';
 
 const app = express();
 
