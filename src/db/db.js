@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb';
 
-const DB_NAME = 'my-database';
+const DB_NAME = 'fsa-real-time-chat';
 
 export const db = {
 	_dbClient: null,
