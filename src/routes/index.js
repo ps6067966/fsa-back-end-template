@@ -1,5 +1,4 @@
-import { helloRoute } from './helloRoute';
+export { protectRoute } from './protectRoute';
 
 export const routes = [
-	helloRoute,
 ];

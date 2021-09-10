@@ -1,5 +1,5 @@
 import express from 'express';
-import { routes } from './routes';
+import { routes, protectRoute } from './routes';
 import { db } from './db';
 
 import * as admin from 'firebase-admin';
@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 routes.forEach(route => {
-	app[route.method](route.path, route.handler);
+	app[route.method](route.path, protectRoute, route.handler);
 });
 
 const start = async () => {
