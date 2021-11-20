@@ -1,10 +1,12 @@
 import express from "express";
+import {routes} from './routes';
 
 const app = express();
+app.use(express.json());
 
-app.get("/hello", (req, res) => {
-  res.status(200).json({ name: "Pratap" });
-});
+routes.forEach(route => {
+    app[route.method](route.path, route.handler);
+})
 
 app.listen(8080, () => {
   console.log("Server is listening on port 8080");
